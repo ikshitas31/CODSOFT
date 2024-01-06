@@ -1,0 +1,62 @@
+import java.util.Scanner;
+public class Calculatinggrade
+{
+    public static void main(String[]args)
+    {
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the number of subjects");
+int subjects=sc.nextInt();
+if(subjects<=0)
+{
+    System.out.println("Invalid Input");
+    return;
+}
+int totalmarks=0;
+int maxmarks=100;
+for(int i=1;i<=subjects;i++)
+{
+    System.out.print("Enter marks obtained in subject"+i+"out of 100");
+    int marks=sc.nextInt();
+    if(marks<0 || marks>maxmarks)
+    {
+        System.out.println("Marks should be in range of 0 to 100".enter valid marks");
+        i--;
+    }
+    else
+    {
+        totalmarks+=marks;
+    }
+}
+double avgpercentage= (double) totalmarks/(subjects+maxmarks)*100;
+System.out.println("Total marks"+ totalmarks);
+System.out.println("Average percentage"+avgpercentage+"%");
+String grade;
+if (avgpercentage>=90)
+{
+    grade="A+";
+}
+ else if (avgpercentage>=80)
+ {
+    grade="A";
+ }
+ else if (avgpercentage>=70)
+ {
+    grade="B";
+ }
+ else if (avgpercentage>=60)
+ {
+    grade="C";
+ }
+ else if (avgpercentage>=50)
+ {
+    grade="D";
+ }
+ else 
+ {
+    grade="F";
+ }
+ System.out.println("Grade is:+grade);
+
+    }
+
+}
